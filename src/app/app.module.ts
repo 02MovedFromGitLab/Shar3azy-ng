@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import {AuthenticationModule} from './authentication/authentication.module';
+import { AppRoutingModule } from './routes/app-routing.module';
+import {AuthenticationModule} from './mod-authentication/authentication.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { BoardAdminComponent } from './board-admin/board-admin.component';
-import { BoardOwnerComponent } from './board-owner/board-owner.component';
-import { BoardCustomerComponent } from './board-customer/board-customer.component';
+import { HomeComponent } from './public/home.component';
+import { BoardAdminComponent } from './admin/board-admin.component';
+import { BoardOwnerComponent } from './owner/board-owner.component';
+import { BoardCustomerComponent } from './customer/board-customer.component';
 
 
 @NgModule({

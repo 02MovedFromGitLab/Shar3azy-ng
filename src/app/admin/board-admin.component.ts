@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../authentication/services/user.service';
+import { UserService } from '../mod-authentication/services/user.service';
 
 @Component({
-  selector: 'app-board-owner',
-  templateUrl: './board-owner.component.html',
-  styleUrls: ['./board-owner.component.css']
+  selector: 'app-board-admin',
+  templateUrl: './board-admin.component.html',
+  styleUrls: ['./board-admin.component.css']
 })
-export class BoardOwnerComponent implements OnInit {
+export class BoardAdminComponent implements OnInit {
   content?: string;
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.getOwnerBoard().subscribe(
+    this.userService.getAdminBoard().subscribe(
       data => {
         this.content = data;
       },
@@ -21,5 +21,4 @@ export class BoardOwnerComponent implements OnInit {
       }
     );
   }
-
 }
