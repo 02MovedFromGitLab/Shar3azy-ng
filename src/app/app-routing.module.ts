@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './authentication/components/login/login.component';
 import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './authentication/components/profile/profile.component';
 import { BoardCustomerComponent } from './board-customer/board-customer.component';
 import { BoardOwnerComponent } from './board-owner/board-owner.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
+import {RegisterComponent} from './authentication/components/register/register.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
