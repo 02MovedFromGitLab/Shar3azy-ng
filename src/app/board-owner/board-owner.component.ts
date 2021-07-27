@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../_services/user.service';
 
 @Component({
-  selector: 'app-board-moderator',
+  selector: 'app-board-owner',
   templateUrl: './board-owner.component.html',
   styleUrls: ['./board-owner.component.css']
 })
