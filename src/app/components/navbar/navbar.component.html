@@ -1,0 +1,49 @@
+<nav class="navbar navbar-light navbar-expand-md bg-white shadow">
+
+  <div class="container"><a class="navbar-brand" routerLink="home">SpringFIGHT</a>
+    <button
+      data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
+      class="visually-hidden">Toggle navigation</span>
+      <span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navcol-1">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="home">Home</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a href="/customer" routerLink="customer" class="nav-link active">Customer view</a>
+        </li>
+        <li class="nav-item" *ngIf="showAdminView">
+          <a href="/admin" routerLink="admin" class="nav-link active">Admin view</a>
+        </li>
+        <li class="nav-item" *ngIf="showOwnerView">
+          <a href="/owner" routerLink="owner" class="nav-link active">Owner view</a>
+        </li>
+        </ul>
+
+      <ul class="navbar-nav ms-auto" *ngIf="!isLoggedIn">
+        <li class="nav-item">
+          <a href="/register" routerLink="register"
+             class="btn btn-primary action-button">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a href="/login" routerLink="login"
+             class="btn btn-primary action-button mx-2">Login</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ms-auto" *ngIf="isLoggedIn">
+        <li class="nav-item">
+          <a href="/profile" routerLink="profile" class="btn btn-primary action-button mx-2">
+            {{ username }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-light action-button mx-2" (click)="logout()">
+            LogOut</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>

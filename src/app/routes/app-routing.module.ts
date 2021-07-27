@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LoginComponent } from '../mod-authentication/components/login/login.component';
-import { HomeComponent } from '../public/home.component';
-import { ProfileComponent } from '../mod-authentication/components/profile/profile.component';
-import { BoardCustomerComponent } from '../customer/board-customer.component';
-import { BoardOwnerComponent } from '../owner/board-owner.component';
-import { BoardAdminComponent } from '../admin/board-admin.component';
-import {RegisterComponent} from '../mod-authentication/components/register/register.component';
+import { LoginComponent } from '../authentication/components/login/login.component';
+import { HomeComponent } from '../components/public/home.component';
+import { ProfileComponent } from '../authentication/components/profile/profile.component';
+import { BoardCustomerComponent } from '../components/customer/board-customer.component';
+import { BoardOwnerComponent } from '../components/owner/board-owner.component';
+import { BoardAdminComponent } from '../components/admin/board-admin.component';
+import {RegisterComponent} from '../authentication/components/register/register.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
