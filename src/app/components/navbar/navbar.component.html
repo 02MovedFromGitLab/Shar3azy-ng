@@ -1,6 +1,6 @@
-<nav class="navbar navbar-light navbar-expand-md bg-white shadow">
+<nav class="navbar navbar-light navbar-expand-md mb-5 bg-white shadow">
 
-  <div class="container"><a class="navbar-brand" routerLink="home">SpringFIGHT</a>
+  <div class="container"><a class="navbar-brand" routerLink="home">Shar3ASY</a>
     <button
       data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
       class="visually-hidden">Toggle navigation</span>
@@ -20,30 +20,30 @@
         <li class="nav-item" *ngIf="showOwnerView">
           <a href="/owner" routerLink="owner" class="nav-link active">Owner view</a>
         </li>
-        </ul>
-
-      <ul class="navbar-nav ms-auto" *ngIf="!isLoggedIn">
-        <li class="nav-item">
-          <a href="/register" routerLink="register"
-             class="btn btn-primary action-button">Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a href="/login" routerLink="login"
-             class="btn btn-primary action-button mx-2">Login</a>
-        </li>
-      </ul>
-
-      <ul class="navbar-nav ms-auto" *ngIf="isLoggedIn">
-        <li class="nav-item">
-          <a href="/profile" routerLink="profile" class="btn btn-primary action-button mx-2">
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a href="/profile" routerLink="profile" class="nav-link active">
             {{ username }}</a>
         </li>
-        <li class="nav-item">
-          <a class="btn btn-light action-button mx-2" (click)="logout()">
-            LogOut</a>
-        </li>
-      </ul>
 
+        <ul class="navbar-nav ms-auto" *ngIf="!isLoggedIn">
+          <li class="nav-item">
+            <a href="/register" routerLink="register"
+               class="btn btn-primary action-button">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a href="/login" routerLink="login"
+               class="btn btn-primary action-button mx-2 mt-lg-0 mt-xl-0 mt-md-0 mt-4">Login</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ms-auto" *ngIf="isLoggedIn">
+          <li class="nav-item" >
+            <a class="btn btn-light action-button mx-2" (click)="logout()">
+              LogOut</a>
+          </li>
+        </ul>
+
+      </ul>
     </div>
   </div>
 </nav>
