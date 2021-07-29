@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light navbar-expand-md mb-5 bg-white shadow">
 
-  <div class="container"><a class="navbar-brand" routerLink="home">Shar3ASY</a>
+  <div class="container"><a class="navbar-brand" href="/all" routerLink="all">Shar3ASY</a>
     <button
       data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
       class="visually-hidden">Toggle navigation</span>
@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navcol-1">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" routerLink="home">Home</a>
+          <a class="nav-link active" href="/all" routerLink="all">Home</a>
         </li>
         <li class="nav-item" *ngIf="isLoggedIn">
           <a href="/member" routerLink="member" class="nav-link active">Customer view</a>

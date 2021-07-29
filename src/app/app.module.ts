@@ -6,9 +6,9 @@ import {AuthenticationModule} from './authentication/authentication.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/public/home.component';
 import { BoardAdminComponent } from './components/admin/board-admin.component';
-import { BoardOwnerComponent } from './components/owner/board-owner.component';
-import { BoardCustomerComponent } from './components/customer/board-customer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import {BoardManagerComponent} from './components/manager/board-manager.component';
+import {BoardMemberComponent} from './components/member/board-member.component';
 
 
 @NgModule({
@@ -16,8 +16,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppComponent,
     HomeComponent,
     BoardAdminComponent,
-    BoardOwnerComponent,
-    BoardCustomerComponent,
+    BoardManagerComponent,
+    BoardMemberComponent,
     NavbarComponent
   ],
   imports: [
