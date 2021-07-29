@@ -4,18 +4,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from '../authentication/components/login/login.component';
 import { HomeComponent } from '../components/public/home.component';
 import { ProfileComponent } from '../authentication/components/profile/profile.component';
-import { BoardCustomerComponent } from '../components/customer/board-customer.component';
-import { BoardOwnerComponent } from '../components/owner/board-owner.component';
-import { BoardAdminComponent } from '../components/admin/board-admin.component';
 import {RegisterComponent} from '../authentication/components/register/register.component';
+import {BoardMemberComponent} from '../components/member/board-member.component';
+import {BoardManagerComponent} from '../components/manager/board-manager.component';
+import { BoardAdminComponent } from '../components/admin/board-admin.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'customer', component: BoardCustomerComponent },
-  { path: 'owner', component: BoardOwnerComponent },
+  { path: 'member', component: BoardMemberComponent },
+  { path: 'manager', component: BoardManagerComponent },
   { path: 'admin', component: BoardAdminComponent },
   { path: '', redirectTo: 'public', pathMatch: 'full' }
 ];

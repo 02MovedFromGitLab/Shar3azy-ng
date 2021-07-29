@@ -9,8 +9,8 @@ import {TokenStorageService} from '../../authentication/services/token-storage.s
 export class NavbarComponent implements OnInit {
 private roles: string[] = [];
 isLoggedIn = false;
+showManagerView = false;
 showAdminView = false;
-showOwnerView = false;
 username?: string;
 
   constructor(private tokenStorageService: TokenStorageService) { }
@@ -21,8 +21,8 @@ username?: string;
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
       this.roles = user.roles;
-      this.showAdminView = this.roles.includes('ROLE_ADMIN');
-      this.showOwnerView = this.roles.includes('ROLE_OWNER');
+      this.showManagerView = this.roles.includes('ROLE_MANAGER');
+      this.showAdminView = this.roles.includes('ROLE_SITE');
       this.username = user.username;
     }
   }
