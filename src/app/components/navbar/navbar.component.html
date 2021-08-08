@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light navbar-expand-md mb-5 bg-white shadow">
 
-  <div class="container"><a class="navbar-brand" href="/all" routerLink="all">Shar3ASY</a>
+  <div class="container"><a class="navbar-brand" routerLink="home">Shar3ASY</a>
     <button
       data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
       class="visually-hidden">Toggle navigation</span>
@@ -9,29 +9,29 @@
     <div class="collapse navbar-collapse" id="navcol-1">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="/all" routerLink="all">Home</a>
+          <a class="nav-link active" routerLink="home">Home</a>
         </li>
         <li class="nav-item" *ngIf="isLoggedIn">
-          <a href="/member" routerLink="member" class="nav-link active">Customer view</a>
+          <a routerLink="member" class="nav-link active">Member view</a>
         </li>
         <li class="nav-item" *ngIf="showManagerView">
-          <a href="/manager" routerLink="manager" class="nav-link active">Manager view</a>
+          <a routerLink="manager" class="nav-link active">Manager view</a>
         </li>
         <li class="nav-item" *ngIf="showAdminView">
-          <a href="/admin" routerLink="admin" class="nav-link active">Admin view</a>
+          <a routerLink="admin" class="nav-link active">Admin view</a>
         </li>
         <li class="nav-item" *ngIf="isLoggedIn">
-          <a href="/profile" routerLink="profile" class="nav-link active">
+          <a routerLink="profile" class="nav-link active">
             {{ username }}</a>
         </li>
 
         <ul class="navbar-nav ms-auto" *ngIf="!isLoggedIn">
           <li class="nav-item">
-            <a href="/register" routerLink="register"
+            <a routerLink="register"
                class="btn btn-primary action-button">Sign Up</a>
           </li>
           <li class="nav-item">
-            <a href="/login" routerLink="login"
+            <a routerLink="login"
                class="btn btn-primary action-button mx-2 mt-lg-0 mt-xl-0 mt-md-0 mt-4">Login</a>
           </li>
         </ul>

@@ -10,14 +10,14 @@ import {BoardManagerComponent} from '../components/manager/board-manager.compone
 import { BoardAdminComponent } from '../components/admin/board-admin.component';
 
 const routes: Routes = [
-  { path: 'all', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'member', component: BoardMemberComponent },
   { path: 'manager', component: BoardManagerComponent },
   { path: 'admin', component: BoardAdminComponent },
-  { path: '', redirectTo: 'public', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 
