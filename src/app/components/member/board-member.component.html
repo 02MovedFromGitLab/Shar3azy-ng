@@ -1,5 +1,67 @@
 <div class="container">
-    <header class="jumbotron">
-      <p>{{ shareClub.name }}</p>
-    </header>
+
+  <section id="ShareClub">
+    <div class="d-flex flex-column mt-3 mb-3">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="text-center mb-3"><h2>{{shareClub.name}}</h2></div>
+        <div class="row">
+          <div class="col-lg-6">
+              <div class="text-left">Club ID: {{shareClub.id}}</div>
+            <div class="text-left">Extra Options: {{shareClub.extraOptions}}</div>
+            <div class="text-left">I am centered</div>
+          </div>
+          <div class="col-lg-6">
+              <div class="text-left">Chairperson: {{shareClub.extraOptions}}</div>
+            <div class="text-left">Treasurer: {{shareClub.id}} </div>
+            <div class="text-left">Secretary: {{shareClub.extraOptions}}</div>
+          </div>
+      </div>
+    </div>
+    </div>
   </div>
+  </section>
+
+  <section id="watchList-PortfolioItemList">
+  <div class="d-flex flex-column mt-3 mb-3">
+    <div class="row">
+      <div class="col-lg-6">
+        <div *ngIf="shareClub?.watchlists?.length > 0"
+             class="text-center"><h2>WatchLists 'col-lg-6'</h2></div>
+          <div *ngFor="let watchlist of shareClub.watchlists" >
+            <div class="text-left">
+              ID: {{watchlist.id}} Name: {{watchlist.name}}
+            </div>
+          </div>
+        </div>
+
+      <div class="col-lg-6">
+        <div class="text-center"><h2>Portfolio Items</h2></div>
+        <div *ngFor="let portfolioItem of shareClub.portfolioItems"  class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{portfolioItem.stock.symbol}}</h5>
+                <h5 class="card-text">{{portfolioItem.stock.name}} </h5>
+                <p class="card-text">{{portfolioItem.stock.exchange.name}} </p>
+                <p class="card-text">Last Transaction: {{portfolioItem.priceAtLastTransaction}} </p>
+                <p class="card-text">On: {{portfolioItem.dateAtLastTransaction}}
+                <p class="card-text">Owned: {{portfolioItem.owned}}
+                <p class="card-text">Value: {{portfolioItem.valueAtLastTransaction}}
+                  <!--<small class="text-muted">
+                    <a routerLink="/fighter/{{fighter.id}}"><br>Detail: {{fighter.firstName}} "
+                      {{fighter.nickName}}" {{fighter.lastName}}</a>
+                  </small>-->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  </section>
+</div>
